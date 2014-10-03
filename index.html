@@ -1,0 +1,40 @@
+ <!DOCTYPE>
+ 
+ <html>
+    <head>
+        
+        <title> Quote Book</title>
+ 		<link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body ng-app="quoteBook" ng-controller="mainCtrl" >
+    	
+    <button class = "button" ng-click="addAppear = !addAppear; hideAdd()">Add Quote</button>
+    <button class = "button" ng-click="removeAppear = !removeHide; hideSearch()">Remove Quote</button>
+    <button class = "button" ng-click="fliterAppear =!searchAppear; hideSearch()"> Search Quote</button>
+
+    <div class ="table">
+    <div class ="tableTwo"> 
+        <input class="input" place holder="typer text here!" ng-model ="addQuoteText"/>
+        <input class ="input" place holder ="type text here!" ng-model ="addAuthorText"/>
+        <buton class ="button" ng-click="" ng-click=""></button>
+       <div class="tableTwo">
+        <input class="input" place holder="typer Author here!" ng-model ="addText"/>
+        <button class="button" ng-click="" ></button>      
+    </div>     
+    
+    <div class ="tableTwo">
+        <div input class="input" place holder="typer text Delete!" ng-model ="Remove"/>
+    </div>
+        </div>
+    </div>
+<ul>
+    <li ng-repeat="quote in quotes">{{quote.text}}  -  {{quote.author}}</li>
+</ul>    
+    	
+    	<script src='http://code.angularjs.org/1.1.5/angular.js' type='text/javascript'></script>
+		<script src="JS/app.js"></script>
+		<script src="JS/mainCtrl.js"></script>
+		<script src="JS/dataService.js"></script>
+
+    </body>
+</html>
